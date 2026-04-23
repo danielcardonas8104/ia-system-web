@@ -637,6 +637,34 @@
       50% { transform: translateX(-50%) translateY(8px); }
     }
 
+    /* Section video backgrounds */
+    .section-relative { position: relative; overflow: hidden; }
+    .section-video-bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; pointer-events: none; z-index: 0;
+    }
+    .section-dark-overlay {
+      position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background: rgba(13,13,13,0.45);
+    }
+    .section-content-z { position: relative; z-index: 2; }
+
+    /* Founder photo */
+    .founder-photo-wrap {
+      position: relative; overflow: hidden; border-radius: 2px;
+      aspect-ratio: 3/4; max-height: 520px;
+    }
+    .founder-photo-wrap img {
+      width: 100%; height: 100%; object-fit: cover; object-position: top center;
+      display: block;
+    }
+    .founder-photo-wrap::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(13,13,13,0.3) 0%, transparent 50%);
+    }
+
     /* Tech dot pulse */
     .tech-dot {
       width: 7px; height: 7px; border-radius: 50%;
@@ -1403,12 +1431,19 @@
     <!-- ============================================================
          AUTORIDAD INSTITUCIONAL
     ============================================================ -->
-    <section id="capacidad" aria-labelledby="capacidad-title" class="py-24 md:py-32 px-6">
-      <div class="max-w-6xl mx-auto">
+    <section id="capacidad" aria-labelledby="capacidad-title" class="section-relative py-24 md:py-32 px-6">
+      <video class="section-video-bg" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+        <source src="/video-salva-2.mp4" type="video/mp4">
+      </video>
+      <div class="section-dark-overlay"></div>
+      <div class="section-content-z max-w-6xl mx-auto">
 
         <div class="grid md:grid-cols-2 gap-16 items-start">
 
           <div class="fade-in">
+            <div class="founder-photo-wrap mb-8 fade-in">
+              <img src="/foto-daniel-profesional.png" alt="CAIO · IA System" loading="lazy">
+            </div>
             <p class="label-caps mb-6">Quién opera el sistema</p>
             <h2 id="capacidad-title" class="heading-serif text-crema mb-6" style="font-size: clamp(1.75rem, 3.5vw, 2.5rem);">
               Certificación verificable.<br/>Criterio real en operación<br/>e inteligencia artificial.
@@ -1490,8 +1525,12 @@
     <!-- ============================================================
          CTA FINAL
     ============================================================ -->
-    <section id="diagnostico" aria-labelledby="cta-title" class="py-24 md:py-36 px-6">
-      <div class="max-w-3xl mx-auto text-center">
+    <section id="diagnostico" aria-labelledby="cta-title" class="section-relative py-24 md:py-36 px-6">
+      <video class="section-video-bg" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+        <source src="/video-trabajo.mp4" type="video/mp4">
+      </video>
+      <div class="section-dark-overlay" style="background:rgba(13,13,13,0.55);"></div>
+      <div class="section-content-z max-w-3xl mx-auto text-center">
 
         <span class="gold-line mx-auto mb-8 fade-in"></span>
 
@@ -1648,6 +1687,51 @@
       </div>
     </section>
 
+    <hr class="section-divider"/>
+
+    <!-- ============================================================
+         DANIEL IA — CONCEPTO CLON DIGITAL
+    ============================================================ -->
+    <section aria-labelledby="danielia-title" class="py-24 md:py-32 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+
+          <!-- Imagen: Daniel IA circuit portrait -->
+          <div class="section-img-block fade-in" style="height:520px; order:1;">
+            <img src="/foto-daniel-ia-circuit.png" alt="Asistente de IA — clon digital de conocimiento" loading="lazy"
+                 style="filter:brightness(0.92) contrast(1.08); object-position: top center;">
+            <div style="position:absolute;inset:0;background:linear-gradient(135deg,transparent 50%,rgba(13,13,13,0.85));"></div>
+            <div style="position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;">
+              <span class="label-caps" style="color:rgba(201,169,98,0.7);">IA System · Asistente de IA</span>
+            </div>
+          </div>
+
+          <!-- Texto -->
+          <div class="fade-in" style="order:2;">
+            <p class="label-caps mb-6" style="display:flex;align-items:center;gap:8px;">
+              <span class="tech-dot"></span>
+              Tu clon digital de IA
+            </p>
+            <h2 id="danielia-title" class="heading-serif text-crema mb-6" style="font-size: clamp(1.75rem, 3.5vw, 2.5rem);">
+              Tu conocimiento,<br/>operando 24/7<br/><em class="text-oro" style="font-style:italic;">sin que estés presente.</em>
+            </h2>
+            <p class="font-inter text-crema-muted leading-relaxed mb-5" style="font-weight:300;">
+              La Base de Conocimiento que construimos contigo se convierte en un asistente de IA que responde, atiende y toma decisiones rutinarias exactamente como tú lo harías. Tu criterio, tu tono, tu proceso — sin ocupar tu tiempo.
+            </p>
+            <p class="font-inter text-crema-muted leading-relaxed mb-8" style="font-weight:300;">
+              No es un chatbot genérico. Es una versión operativa de tu conocimiento específico, entrenada con tus protocolos, tus respuestas y tus estándares. Tu negocio opera con tu criterio aunque no estés disponible.
+            </p>
+            <div class="tension-block">
+              <p class="font-inter text-crema-muted text-sm" style="font-weight:400; font-style:italic;">
+                "Imagina que pudieras clonar tu conocimiento y ponerlo a trabajar 24 horas. Eso es exactamente lo que construimos."
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- FOOTER -->
@@ -1735,16 +1819,16 @@
           '  vec2 uv=(gl_FragCoord.xy*2.0-resolution.xy)/min(resolution.x,resolution.y);',
           '  float t=time*0.05;',
           '  float lineWidth=0.002;',
-          '  vec3 color=vec3(0.0);',
-          '  for(int j=0;j<3;j++){',
-          '    for(int i=0;i<5;i++){',
-          '      color[j]+=lineWidth*float(i*i)/abs(fract(t-0.01*float(j)+float(i)*0.01)*5.0-length(uv)+mod(uv.x+uv.y,0.2));',
-          '    }',
+          '  float brightness=0.0;',
+          '  for(int i=0;i<5;i++){',
+          '    brightness+=lineWidth*float(i*i)/abs(fract(t+float(i)*0.013)*5.0-length(uv)+mod(uv.x+uv.y,0.2));',
           '  }',
-          '  float intensity=(color[0]+color[1]+color[2])*0.5;',
           '  vec3 gold=vec3(0.788,0.663,0.384);',
-          '  float alpha=clamp(intensity*3.5,0.0,1.0);',
-          '  gl_FragColor=vec4(gold*intensity*2.2,alpha);',
+          '  vec3 white=vec3(1.0,0.96,0.88);',
+          '  float v=clamp(brightness*2.0,0.0,1.0);',
+          '  vec3 col=mix(gold,white,clamp(brightness*4.0,0.0,1.0));',
+          '  float alpha=clamp(v,0.0,1.0);',
+          '  gl_FragColor=vec4(col*v*1.8,alpha);',
           '}'
         ].join('\n');
 

@@ -1,0 +1,7 @@
+.vercel
+.env
+_ffmpeg_list.txt
+out_*.mp3
+final.mp3
+__pycache__/
+*.pyc

@@ -27,6 +27,17 @@ Diseñar y construir la arquitectura de memoria en markdown para trabajar con m�
 - [ ] Crear estructura de carpetas en Drive
 - [ ] Piloto: primer post programado vía Claude + Metricool
 
-## Dónde retomar
+## Segunda parte de la sesión (continuación)
 
-Ejecutar la migración del vault en la Mac (5 minutos, README del vault) y correr el piloto de publicación con el SOP.
+- Se verificó y activó el conector de Meta Ads (meta_daniel)
+- Se crearon 10 borradores en Metricool: 4 reels, 2 carruseles, 4 historias, del 14 al 19 de julio (ver calendario-contenido-jul-2026.md)
+- Se creó la campaña piloto de conversaciones en Meta Ads, PAUSADA: 100 MXN diarios x 5 días, público México, anuncio con lámina del carrusel 6 y CTA de mensaje con palabra PLAN
+- Hallazgo: la página Daniel Cardona Finanzas no tiene WhatsApp Business conectado; el piloto usa Messenger
+
+## Dónde retomar (HANDOFF para la siguiente conversación)
+
+1. Revisar y aprobar los 10 borradores en el planner de Metricool (corregir acentos del REEL_1 y validar que el copy coincida con cada video)
+2. Activar la campaña 120248625002790331 en Ads Manager cuando los borradores estén aprobados
+3. Conectar WhatsApp Business a la página y pedir cambiar el destino de la campaña
+4. Migrar el vault a repo privado ia-system-brain (README del vault) y cargar CONTEXTO-MAESTRO.md en cada LLM
+5. Al día 3 de campaña, pedir al agente métricas y decidir si se escala o se corta

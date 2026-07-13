@@ -17,7 +17,8 @@ Programar y publicar contenido en todas las redes sin automatización de navegad
 
 ## Estado
 
-- [x] Metricool conectado y verificado (2026-07-13)
+- [x] Metricool conectado y verificado (2026-07-13); incluye cuenta de Facebook Ads vinculada
+- [ ] Autorizar el conector meta_daniel en claude.ai (Configuración > Conectores) para campañas de Meta Ads directas; hoy está creado pero sin autenticar
 - [ ] Definir calendario semanal de contenido
 - [ ] Primer post programado vía Claude + Metricool como prueba piloto
 - [ ] SOP de publicación documentado (ver 04-SOPs/sop-publicacion-redes-metricool.md)

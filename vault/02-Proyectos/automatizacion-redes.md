@@ -18,10 +18,22 @@ Programar y publicar contenido en todas las redes sin automatización de navegad
 ## Estado
 
 - [x] Metricool conectado y verificado (2026-07-13); incluye cuenta de Facebook Ads vinculada
-- [ ] Autorizar el conector meta_daniel en claude.ai (Configuración > Conectores) para campañas de Meta Ads directas; hoy está creado pero sin autenticar
+- [x] Conector meta_daniel autorizado y verificado (2026-07-13): Meta Ads completo desde Claude
+- [ ] Definir campaña piloto en Meta Ads con tope de presupuesto
 - [ ] Definir calendario semanal de contenido
 - [ ] Primer post programado vía Claude + Metricool como prueba piloto
 - [ ] SOP de publicación documentado (ver 04-SOPs/sop-publicacion-redes-metricool.md)
+
+## Meta Ads (verificado 2026-07-13)
+
+- Business Manager: Daniel Cardona Coach (751460993955143)
+- Página para anuncios: Daniel Cardona Finanzas (679228925271437)
+- Cuentas publicitarias activas en MXN:
+  - act_1735587487315956 (con método de pago, la vinculada en Metricool)
+  - act_3640744789561033 "Daniel Cardona" (con método de pago)
+  - act_2060563824885192 (sin método de pago, no usar)
+- Capacidades desde Claude: crear campañas, ad sets, anuncios y creativos, públicos personalizados, boost de posts de Instagram, A/B tests, pixel, catálogos, insights y benchmarks
+- Presupuesto mínimo diario de Meta: 17.57 MXN
 
 ## Regla de gobernanza
 

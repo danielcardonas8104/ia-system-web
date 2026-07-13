@@ -1,0 +1,11 @@
+# Archivos internos que NO deben servirse en el sitio público
+*.md
+docs/
+vault/
+guion.txt
+tts_pipeline.py
+requirements.txt
+.env.example
+index-backup-v1.html
+privacidad-backup-v1.html
+terminos-backup-v1.html

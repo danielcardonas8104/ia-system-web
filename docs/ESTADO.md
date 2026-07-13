@@ -16,7 +16,9 @@ Source of truth del estado del proyecto. Se actualiza al final de cada sesión d
 ## En progreso
 
 - Arquitectura de contexto en markdown para memoria persistente entre sesiones y LLMs (branch `claude/obsidian-markdown-context-jfhg2k`)
-- Conexión del vault de Obsidian como memoria de largo plazo
+- Vault de Obsidian completo creado en `vault/` con contexto maestro, inventario, fichas de proyecto y SOPs; pendiente migrarlo a repo privado `ia-system-brain` (instrucciones en `vault/README.md`)
+- Se agregó `.vercelignore` para dejar de servir documentos internos (.md, docs/, vault/, backups) en el sitio público; aplica al hacer merge y deploy
+- Metricool verificado por MCP: marca `coach_financiero_` con Instagram, Threads, TikTok, Facebook, Facebook Ads y YouTube conectados
 
 ## Pendientes conocidos
 
@@ -24,12 +26,15 @@ Source of truth del estado del proyecto. Se actualiza al final de cada sesión d
 - [ ] Decidir H1 definitivo (opciones A, B o C del copy deck)
 - [ ] Confirmar deliverables exactos del retainer y rango de precio en FAQ
 - [ ] Confirmar testimonios y logotipos reales disponibles
-- [ ] Resolver exposición pública de documentos internos .md en la raíz (ver DECISIONES.md, D-002)
+- [ ] Hacer merge de esta branch para activar `.vercelignore` en producción (resuelve D-002)
 - [ ] Unificar identidad del proyecto en CLAUDE.md y AGENTS.md (ver DECISIONES.md, D-003)
+- [ ] Migrar `vault/` a repo privado `ia-system-brain` y borrarlo de este repo (ver D-004)
+- [ ] Cargar CONTEXTO-MAESTRO.md en Projects de ChatGPT y Claude, y Gem de Gemini
+- [ ] Piloto: primer post programado vía Claude + Metricool (SOP en el vault)
 
 ## Dónde me quedé
 
-Se creó la estructura `docs/` con ESTADO, DECISIONES, plantillas y guía de arquitectura de contexto. Falta que el dueño del proyecto cree el vault de Obsidian siguiendo `docs/obsidian-vault.md` y adopte el ritual de cierre de sesión.
+El vault completo está en `vault/` de esta branch, listo para copiar a la Mac, abrir en Obsidian y subir a su repo privado (5 minutos siguiendo `vault/README.md`). El siguiente hito es el piloto de publicación en redes con Metricool.
 
 ## Cómo actualizar este archivo
 

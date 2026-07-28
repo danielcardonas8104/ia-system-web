@@ -97,7 +97,34 @@ Su básica es de 60,000 UDIS contra 370,000 UDIS de muerte accidental, una razó
 
 Los cuatro productos tradicionales mantienen paridad exacta. Las dos pólizas Universal Life, Personaliza Pru, tienen riders contratados de forma independiente a la básica. Pendiente por validar contra la carátula si en Universal Life el beneficio por fallecimiento incluye además el valor del fondo, en cuyo caso la básica de 60,000 UDIS subestima la protección efectiva de esas dos pólizas.
 
-### 4.5 Exceso en cero en ambas Universal Life
+### 4.5 La póliza en dólares tiene un costo por unidad de protección muy favorable, y un plazo por aclarar
+
+Datos confirmados en carátula de la 102264:
+
+| Campo | Valor |
+|---|---|
+| Solicitud | SE0000111188 |
+| Emisión | 30/10/2025 |
+| Prima anual | 821.76 USD |
+| Prima por periodo | 821.76 USD, frecuencia anual |
+| Primas en depósito | 0.00 USD |
+| Medio de cobro | Débito |
+| Asegurado | Daniel Cardona Sánchez, ID 87727 |
+| Fecha de nacimiento | 16/04/1981 |
+| Edad de emisión | 44 |
+
+Costo por unidad de protección: 821.76 USD anuales para 113,300 USD de suma asegurada equivale a **7.25 USD por cada 1,000 USD de cobertura**. Es la relación más eficiente identificada hasta ahora en el portafolio familiar.
+
+Si el "5 años" del producto es periodo de pago de primas y no vigencia, el desembolso total sería de 4,108.80 USD, unos 71,957 MXN, por una protección de 1,984,223 MXN. Relación de 27.6 a 1.
+
+**Pendiente crítico por validar.** Hay dos lecturas posibles de "BIENESTAR PRUDENTIAL 5 AÑOS":
+
+1. Pago limitado a 5 años con cobertura vitalicia o de largo plazo. Escenario favorable.
+2. Vigencia de 5 años. En ese caso la cobertura termina el 30/10/2030 y Daniel pierde 1,984,223 MXN, el 34 por ciento de su protección, a los 49 años.
+
+La diferencia entre ambas lecturas es material para la planeación. Se resuelve leyendo la carátula o las condiciones generales del producto.
+
+### 4.6 Exceso en cero en ambas Universal Life
 
 Tanto 102239 como 100631 muestran EXCESO en 0.00. No hay aportación adicional por encima de la prima base, por lo que no hay capa de suma asegurada extra ni acumulación acelerada de valor de rescate por esa vía.
 
@@ -146,11 +173,12 @@ MXN = (suma_UDIS x valor_UDI) + (suma_USD x tipo_cambio_FIX)
 
 ## 6. Pendientes por validar
 
-1. Ausencia de cobertura de invalidez en la póliza 100631 de Aldo.
-2. Si el beneficio por fallecimiento en Personaliza Pru incluye el valor del fondo además de la suma básica.
-3. Reconfirmar UDI y tipo de cambio FIX contra Banxico el día que se use el análisis.
-4. Suma asegurada de la póliza de auto Banorte 2314473 de Martha, no digitalizada.
-5. Estatus individual de las coberturas de invalidez y accidental, que el portal no muestra en pantalla.
+1. Si el "5 años" de la póliza 102264 es periodo de pago o vigencia. Determina si Daniel conserva o pierde el 34 por ciento de su protección en octubre de 2030.
+2. Ausencia de cobertura de invalidez en la póliza 100631 de Aldo.
+3. Si el beneficio por fallecimiento en Personaliza Pru incluye el valor del fondo además de la suma básica.
+4. Reconfirmar UDI y tipo de cambio FIX contra Banxico el día que se use el análisis.
+5. Suma asegurada de la póliza de auto Banorte 2314473 de Martha, no digitalizada.
+6. Estatus individual de las coberturas de invalidez y accidental, que el portal no muestra en pantalla.
 
 ## 7. Método de extracción
 

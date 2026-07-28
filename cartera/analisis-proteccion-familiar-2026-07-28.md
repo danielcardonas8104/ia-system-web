@@ -103,28 +103,52 @@ Tanto 102239 como 100631 muestran EXCESO en 0.00. No hay aportación adicional p
 
 ## 5. Conversión a pesos
 
-No fue posible verificar el valor de la UDI ni el tipo de cambio en la fecha de corte: la política de red del entorno bloquea Banxico y el DOF. Las cifras en pesos de esta sección usan valores de referencia y deben recalcularse antes de usarse con un cliente o para una decisión.
+Valores usados:
+- UDI: 8.830830 MXN, valor vigente a julio 2026
+- USD: 17.5130 MXN, tipo de cambio FIX publicado en el DOF para el 24 de julio de 2026
 
-Valores de referencia usados, por sustituir:
-- UDI: 8.70 MXN
-- USD: 18.50 MXN
+Ambos deben reconfirmarse contra Banxico antes de usar estas cifras con un cliente. La UDI se actualiza a diario y el FIX cada día hábil.
 
-| Escenario | UDIS | MXN por UDIS | USD | MXN por USD | Total MXN |
-|---|---|---|---|---|---|
-| Fallecimiento cualquier causa | 745,000 | 6,481,500 | 113,300 | 2,096,050 | 8,577,550 |
-| Fallecimiento accidental | 1,940,000 | 16,878,000 | 226,600 | 4,192,100 | 21,070,100 |
+### Total consolidado por persona
+
+| Persona | Cualquier causa (MXN) | Accidental (MXN) |
+|---|---|---|
+| Daniel Cardona Sánchez | 5,825,634 | 12,887,584 |
+| Martha Leticia Gosserez Rojas | 2,207,708 | 4,415,415 |
+| Aldo Cardona Gosserez | 529,850 | 3,797,257 |
+| **Total familia** | **8,563,191** | **21,100,256** |
+
+### Desglose de Daniel por póliza, fallecimiento por cualquier causa
+
+| Póliza | Moneda | Suma asegurada | MXN | Peso relativo |
+|---|---|---|---|---|
+| 102261 Garantía Prudential | UDIS | 225,000 | 1,986,937 | 34.1 % |
+| 102264 Bienestar 5 años | USD | 113,300 | 1,984,223 | 34.1 % |
+| 89793 Bienestar 20 años | UDIS | 150,000 | 1,324,625 | 22.7 % |
+| 102239 Personaliza Pru | UDIS | 60,000 | 529,850 | 9.1 % |
+| **Total** | | | **5,825,634** | **100 %** |
+
+La póliza en dólares aporta poco más de un tercio de la protección de Daniel, prácticamente empatada con la 102261. Es además la única cobertura del portafolio familiar que no está expuesta al peso.
+
+### Invalidez, total consolidado
+
+| Persona | MXN |
+|---|---|
+| Daniel Cardona Sánchez | 7,061,950 |
+| Martha Leticia Gosserez Rojas | 2,207,708 |
+| Aldo Cardona Gosserez | 0 |
 
 Fórmula para recalcular:
 
 ```
-MXN = (suma_UDIS x valor_UDI) + (suma_USD x tipo_cambio)
+MXN = (suma_UDIS x valor_UDI) + (suma_USD x tipo_cambio_FIX)
 ```
 
 ## 6. Pendientes por validar
 
 1. Ausencia de cobertura de invalidez en la póliza 100631 de Aldo.
 2. Si el beneficio por fallecimiento en Personaliza Pru incluye el valor del fondo además de la suma básica.
-3. Valor de la UDI y tipo de cambio a la fecha de corte.
+3. Reconfirmar UDI y tipo de cambio FIX contra Banxico el día que se use el análisis.
 4. Suma asegurada de la póliza de auto Banorte 2314473 de Martha, no digitalizada.
 5. Estatus individual de las coberturas de invalidez y accidental, que el portal no muestra en pantalla.
 

@@ -8,10 +8,18 @@
 # Ejemplo:
 #   ./compile-context.sh ~/Obsidian/EVIA-Brain ~/Desktop/evia-context
 #
+# Compilar directo a Google Drive, para el connector de ChatGPT:
+#   ./compile-context.sh ~/Obsidian/EVIA-Brain ~/"Google Drive"/"Mi unidad"/EVIA-Context
+#
+# Variables de entorno:
+#   EXT=txt     cambia la extension de salida. Usar si el connector de Drive
+#               no lee el contenido de archivos .md
+#   MAX_KB=180  tamano maximo por archivo del pack
+#
 # Salida:
-#   EVIA-CORE.md    borrador del nucleo, editar a mano antes de usar
-#   INDEX.md        mapa de todas las notas con ruta y primera linea
-#   pack/parte-NN.md  contenido troceado por tamano
+#   EVIA-CORE.md       borrador del nucleo, editar a mano antes de usar
+#   INDEX.<EXT>        mapa de todas las notas con ruta y titulo
+#   pack/parte-NN.<EXT>  contenido troceado por tamano
 
 set -euo pipefail
 
@@ -20,6 +28,10 @@ OUT="${2:-$HOME/Desktop/evia-context}"
 
 # Tamano maximo por archivo del pack, en KB.
 MAX_KB="${MAX_KB:-180}"
+
+# Extension de salida del pack y del indice.
+# Usar EXT=txt si el connector de Drive no lee contenido de archivos .md.
+EXT="${EXT:-md}"
 
 # Carpetas excluidas. Ajustar segun el vault.
 EXCLUDES=(
@@ -98,15 +110,15 @@ echo
     titulo="${titulo//|/ }"
     echo "| \`$rel\` | ${titulo} |"
   done < "$NOTES_LIST"
-} > "$OUT/INDEX.md"
+} > "$OUT/INDEX.$EXT"
 
-echo "Generado: INDEX.md"
+echo "Generado: INDEX.$EXT"
 
 # ---------------------------------------------------------------------------
 # pack/parte-NN.md
 # ---------------------------------------------------------------------------
 PART=1
-CURRENT="$OUT/pack/parte-$(printf '%02d' $PART).md"
+CURRENT="$OUT/pack/parte-$(printf '%02d' $PART).$EXT"
 MAX_BYTES=$(( MAX_KB * 1024 ))
 
 start_part() {
@@ -130,7 +142,7 @@ while IFS= read -r file; do
 
   if (( size_current + size_file > MAX_BYTES )) && (( size_current > 512 )); then
     PART=$(( PART + 1 ))
-    CURRENT="$OUT/pack/parte-$(printf '%02d' $PART).md"
+    CURRENT="$OUT/pack/parte-$(printf '%02d' $PART).$EXT"
     start_part
   fi
 

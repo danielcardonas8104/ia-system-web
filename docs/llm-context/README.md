@@ -28,8 +28,15 @@ Regla: **L1 es obligatorio**. L2 y L3 son opcionales y aditivos.
 - `SOP-contexto-multi-llm.md` - procedimiento completo paso a paso
 - `CONTEXT-PACK.template.md` - plantilla del nucleo `EVIA-CORE.md`
 - `compile-context.sh` - compila el vault de Obsidian en pack + indice
+- `instrucciones-claude.md` - configuracion de claude.ai web, movil y Desktop
 - `instrucciones-chatgpt.md` - texto listo para pegar en ChatGPT Project o Custom GPT
 - `checklist-verificacion.md` - como comprobar que el contexto realmente carga
+
+## Advertencia de capas
+
+`CLAUDE.md` lo lee Claude Code, no el chat de Claude. Son superficies distintas
+con configuracion independiente. Un `CLAUDE.md` impecable no hace que claude.ai
+en el celular sepa quien eres. Detalle en `instrucciones-claude.md`.
 
 ## Quick start
 
